@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-
+app.use(express.static("views"));
 mongoose.connect("mongodb+srv://zainifaroj:PgZCpjD4Ptub0DhS@cluster0.evsak56.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set('strictQuery', true);
 
