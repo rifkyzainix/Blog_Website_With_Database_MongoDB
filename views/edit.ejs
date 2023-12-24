@@ -1,0 +1,35 @@
+<!-- views/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <%- include("partials/header"); -%>
+
+    <div class="container mt-5">
+        <h2>Edit Post</h2>
+        <form action="/edit/<%= postId %>" method="POST">
+            <div class="form-group">
+                <label for="postTitle">Judul</label>
+                <input type="text" class="form-control" id="postTitle" name="postTitle" value="<%= title %>" required>
+            </div>
+            <div class="form-group">
+                <label for="postBody">Isi Post</label>
+                <textarea class="form-control" id="postBody" name="postBody" rows="5" required><%- content %></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+        </form>
+    </div>
+
+    <%- include("partials/footer"); -%>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<%- include("partials/header"); -%>
+
+<div class="container mt-5 contact-container">
+    <h1>Contact</h1>
+    <p><%= contactContent %></p>
+
+    <!-- Contact Form -->
+    <form action="/contact" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" class="form-control" id="company" name="company" required>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" class="form-control" id="website" name="website" required>
+        </div>
+
+        <div class="text-right">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer"); -%>

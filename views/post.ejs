@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+
+<div class="post-container">
+    <div class="text-right">
+        <a href="/edit/<%= postId %>" class="btn btn-warning">Edit</a>
+    </div>
+    <h1><%=title%></h1>
+    <br>
+    <p style="text-align: justify;"><%=content%></p>
+</div>
+
+
+<%- include("partials/footer"); -%>
