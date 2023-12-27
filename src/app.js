@@ -13,11 +13,9 @@ const contactContent = "Kami senang sekali mendengar dari Anda. Jika Anda memili
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, "views"))
+app.set('views', path.join(path.resolve(), "src/views"))
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(path.join(__dirname, "public")));
-
-console.log(path.join(path.resolve(), "public"));
+app.use(express.static(path.join(path.resolve(), "public")))
 
 mongoose.connect("mongodb+srv://zainifaroj:PgZCpjD4Ptub0DhS@cluster0.evsak56.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set('strictQuery', true);
