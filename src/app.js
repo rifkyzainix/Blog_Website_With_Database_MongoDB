@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
+const path = require('path');
 
 const homeStartingContent = " ";
 const aboutContent = "Selamat datang di Blog Website Kami adalah mitra yang setia untuk mewujudkan impian Anda memiliki blog pribadi atau bisnis secara online Dengan fokus pada kemudahan, kreativitas, dan keandalan, Nama Layanan Pembuatan Blog hadir untuk membantu Anda menggambarkan dan mewujudkan visi unik Anda di dunia digital.";
@@ -12,7 +13,7 @@ const contactContent = "Kami senang sekali mendengar dari Anda. Jika Anda memili
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, "src/views"))
+app.set('views', path.join(__dirname, "views"))
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
